@@ -18,126 +18,245 @@ html {
 }
 
 body {
-  background-color: gray;
-/* Use a system font, if none are available use an available sans-sarif   font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  margin: 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #0f5f60;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: center;
   min-height: 100vh;
 }
 
 main {
-  width: 300px;
-  background-color: white;
-  font-size: 2rem;
+  align-items: center;
+  background: white;
+  display: grid;
+  height: 600px;
+  justify-content: center;
+  width: 400px;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 50px 1fr 1.4fr 1fr;
+  grid-template-areas:
+  "photo"
+  "name"
+  "rating"
+  "price"
+  "message"
+}
+
+#photo {
+  grid-area: photo;
   text-align: center;
 }
 
-#status {
+#photo p {
+  color: lightgray;
+  float: right;
+  font-size: 1.4rem;
+  margin-right: 1.5rem;
+  margin-top: -1.5rem;
   text-align: right;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: gray;
-  padding: 10px 20px 0 0;
+  text-transform: uppercase;
 }
 
-img {
+#profile-photo {
   border-radius: 50%;
-  border: green 4px solid;
+  border: 3px solid #66d189;
+  height: 140px;
+  margin: 1rem 0 -1.2rem 7rem;
+  object-fit: cover;
+  width: 140px;
 }
 
-h1, p {
-  margin: 0;
+#name {
+  display: flex;
+  font-size: 2rem;
+  grid-area: name;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
-h1 {
-  font-size: 3.2rem;
-  padding: 8px 0;
+#rating {
+  background: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  font-size: 2.4rem;
+  grid-area: rating;
+  height: 100%;
+  text-align: center;
 }
 
-#occupation {
-  background-color: lightgray;
-  padding: 16px 0;
+#stars {
+  color: #f7dd2e;
+  margin-bottom: -1.6rem;
+  margin-top: 1.5rem;
 }
 
-#brand {
+#star-outline {
+  color: lightgray;
+}
+
+#rating p:first-child {
+  font-weight: 200;
+  margin: 1rem 0 -1.5rem 0;
+}
+
+#about {
   display: none;
 }
 
-#offer {
-  padding: 16px 0;
-}
-
-#contact {
+#price {
+  background: white;
   display: flex;
+  flex-direction: column;
+  grid-area: price;
+  text-align: center;
 }
 
-#contact > p {
-  height: 60px;
+#price h2 {
+  font-size: 3rem;
+  margin-bottom: -1rem;
+}
+
+#price p {
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-top: -1.5rem;
+}
+
+#message {
+  display: flex;
+  font-size: 4rem;
+  grid-area: message;
+  height: 100%;
+}
+
+#phone, 
+#text {
+  align-content: center;
+  color: white;
+  font-size: 6.5rem;
+  text-align: center;
   width: 50%;
-  display: flex;
+}
+
+#phone {
+  background:#66d189;
+}
+
+#text {
+  background: #5abd7c;
+}
+
+@media only screen and (min-width: 1024px) {
+
+main {
   align-items: center;
+  background: white;
+  display: grid;
+  height: 350px;
   justify-content: center;
+  width: 600px;
+
+  grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "photo name name name name"
+  "photo rating rating rating rating"
+  "photo about about about about"
+  "message price price price price"
 }
 
-#contact > p:first-child {
-  background-color: lime;
+#photo {
+  align-items: center;
+  height: 100%;
 }
 
-#contact > p:last-child {
-  background-color: green;
+#profile-photo {
+  height: 150px;
+  margin: 1rem 0 1rem 1rem;
+  width: 150px;
 }
 
+#photo p {
+  color: lightgray;
+  display: flex;
+  float: left;
+  font-size: 1.4rem;
+  margin: 1.5rem;
+  text-transform: uppercase;
+}
 
-@media only screen and (min-width: 600px) {
-  main {
-    display: grid;
-    text-align: left;
-    width: 550px;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 
-      "status name"
-      "img occupation"
-      "img brand" 
-      "contact offer";
-  }
+#name {
+  background: rgb(240, 240, 240);
+  justify-content: start;
+  margin: 0 0;
+}
 
-  #status {
-    text-align: left;
-    padding: 10px 0 0 20px;
-  }
+#name h1 {
+  margin-bottom: -.4rem;
+  margin-left: 2.7rem;
+}
 
-  img {
-    grid-area: img;
-    margin: 0 auto;
-  }
+#rating {
+  text-align: left;
+}
 
-  #brand {
-    display: inline;
-  }
+#rating p:last-child {
+  margin-bottom: 5px;
+  margin-left: 2rem;
+}
 
-  #contact {
-    grid-area: contact;
-  }
+#price {
+  background:rgb(240, 240, 240);
+  height: 100%;
+  justify-content: center;
+  text-align: left;
+}
 
+#price h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-left: 2rem;
+}
 
-  #brand > p {
-    border-left: green 4px solid;
-    padding: 0 20px 0 8px;
-    font-size: 1.6rem;
-  }
+#price p {
+  font-size: 1rem;
+}
 
-  #offer {
-    font-size: 1.4rem;
-    padding: 10px;
-  }
+#stars {
+  padding-left: 2rem;
+}
 
-  #name, #occupation, #brand, #offer {
-    padding-left: 20px;
-    background-color: lightgray;
-  }
+#about {
+  background:rgb(240, 240, 240);
+  display: flex;
+  font-size: 1.8rem;
+  grid-area: about;
+  padding: 0;
+}
+
+#about p {
+  margin-left: 1rem;
+}
+
+#message {
+  font-size: 5rem;
+}
+
+#offer {
+  border-left: 3px solid #66d189;
+  height: 6rem;
+  margin-left: 2rem;
+  margin-top: 2.5rem;
+}
+
+#phone, 
+#text {
+  font-size: 5rem;
+  justify-items: center;
+  margin-top: 0;
+  text-align: center;
+  width: 50%;
+}
 }

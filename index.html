@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8e9d2540c9.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Flexbox and Grid</title>
 </head>
 <body>
-  <main>
-    <div id="status">ONLINE</div>
-    <img src="https://picsum.photos/125" alt="placeholder avatar">
-    <h1 id="name">John Shoshone</h1>
-    <section id="occupation">
-      <p>🌟🌟🌟🌟⭐</p>
-      <p>Psychic Healer</p>
-    </section>
-    <section id="brand">
-      <p>Depression, Life Coaching, Mental & Emotional Health, Stress & Anger Management</p>
-    </section>
-    <section id="offer">
-      <p><strong>5 minutes free</strong></p>
-      <p>then $5.99/min</p>
-    </section>
-    <section id="contact">
-      <p>📞</p>
-      <p>🗯</p>
-    </section>
-  </main>
+    <main class='container'>
+        <div id='photo'>
+            <p>online</p>
+            <img id="profile-photo" src="/assets/clippy.png" alt="profile photo">
+        </div>
+        <div id="name">
+            <h1>Nubs</h1>
+        </div>
+        <div id='rating'> 
+            <div id='stars'>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i id="star-outline" class="fa fa-star"></i>
+            </div>
+            <p>Clippy Mascot</p>
+        </div>
+        <div id='about'>
+            <div class="offer"></div>
+            <p>Squad management, class roster, attendance, deliverables, feedback, & more! </p>
+        </div>
+        <div id='price'> 
+            <h2>1st month free<h2> 
+            <p>then $5.99/mo</p>
+        </div>
+        <div id="message">
+            <div id='phone'>
+                <i class="fa fa-phone"></i>
+            </div>
+            <div id='text'>
+                <i class="fa fa-comments"></i>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
