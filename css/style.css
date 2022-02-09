@@ -40,7 +40,7 @@ main {
   "photo"
   "rating"
   "price"
-  "message"
+  "contact"
 }
 
 #photo {
@@ -73,6 +73,8 @@ main {
   background: rgb(240, 240, 240);
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
   font-size: 2.4rem;
   grid-area: rating;
   height: 100%;
@@ -81,17 +83,10 @@ main {
 
 #stars {
   color: #f7dd2e;
-  margin-bottom: -1.6rem;
-  margin-top: 1.5rem;
 }
 
 #star-outline {
   color: lightgray;
-}
-
-#rating p:first-child {
-  font-weight: 200;
-  margin: 1rem 0 -1.5rem 0;
 }
 
 #about {
@@ -99,45 +94,44 @@ main {
 }
 
 #price {
-  background: white;
   display: flex;
   flex-direction: column;
   grid-area: price;
   text-align: center;
 }
 
-#price h2 {
-  font-size: 3rem;
-  margin-bottom: -1rem;
+h1, p {
+  margin: 0;
 }
 
-#price p {
+h1 {
+  font-size: 3rem;
+}
+
+p {
   font-size: 2.5rem;
   font-weight: 200;
-  margin-top: -1.5rem;
 }
 
-#message {
+#contact {
   display: flex;
-  font-size: 4rem;
-  grid-area: message;
+  grid-area: contact;
   height: 100%;
 }
 
-#phone, 
-#text {
+#contact > div{
   align-content: center;
   color: white;
-  font-size: 6.5rem;
+  font-size: 6rem;
   text-align: center;
   width: 50%;
 }
 
-#phone {
+#contact > div:first-child {
   background:#66d189;
 }
 
-#text {
+#contact > div:last-child {
   background: #5abd7c;
 }
 
